@@ -1,0 +1,31 @@
+<div class="home">
+   <div class="container">
+      <ul>
+         <li routerLinkActive="active">
+            <a [routerLink]="['/']">Home</a>
+         </li>
+
+         <li routerLinkActive="active">
+            <a [routerLink]="['/projects']">Projects</a>
+         </li>
+
+
+         <li routerLinkActive="active">
+            <a [routerLink]="['/team']">Team</a>
+         </li>
+         <li routerLinkActive="active">
+            <a [routerLink]="['/news']">News</a>
+         </li>
+         <li routerLinkActive="active">
+            <a [routerLink]="['/vacancy']">vacancy</a>
+         </li>
+
+         <li routerLinkActive="active">
+            <a [routerLink]="['/admin']">Admin</a>
+         </li>
+      </ul>
+
+
+   </div>
+   <router-outlet></router-outlet>
+</div>

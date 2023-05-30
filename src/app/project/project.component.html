@@ -1,0 +1,26 @@
+<div *ngIf="project$ | async as project; else loading" class="">
+   <div class="project container">
+
+
+      <div class="flex">
+         <div class="item">
+            <h2 class="text-center">{{project.title}}</h2>
+         </div>
+         <div class="item">
+            <p>Дата создания: {{project.date}}</p>
+         </div>
+         <div class="item">
+            <p>Описание проекта: <br> {{project.text}}</p>
+         </div>
+
+      </div>
+      <div class="">
+         <button routerLink="/">Back</button>
+      </div>
+   </div>
+
+</div>
+
+<ng-template #loading>
+   <p>loading</p>
+</ng-template>

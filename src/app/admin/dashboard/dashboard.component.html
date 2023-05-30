@@ -1,0 +1,30 @@
+<div *ngIf="projects.length ; else loading" class="">
+   <h2>Dashboard projects</h2>
+   <table>
+      <thead>
+         <tr>ID</tr>
+         <tr>Title</tr>
+         <tr>Text</tr>
+         <tr>Date of creation</tr>
+         <tr>Open</tr>
+         <tr>Delete</tr>
+      </thead>
+
+      <tbody>
+         <tr *ngFor="let project of projects; let idx = index">
+            <td>{{idx+1}}</td>
+            <td>{{project.title}}</td>
+            <td>{{project.text}}</td>
+            <td>{{project.date}}</td>
+            <td>
+               <button [routerLink]="['/admin','project',project.id,'edit']">Edit</button>
+            </td>
+            <td><button (click)="remove(project.id)">Delete</button></td>
+         </tr>
+      </tbody>
+   </table>
+</div>
+
+<ng-template #loading>
+   <p>loading</p>
+</ng-template>

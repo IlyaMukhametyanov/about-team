@@ -1,0 +1,21 @@
+<div class="news container">
+   <div class="news-header text-center">
+      <h2>Our News</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras tincidunt dolor risus, nec convallis justo
+         malesuada nec.</p>
+   </div>
+   <div class="news-body">
+
+
+      <div *ngIf="news$ | async as news" class="newses container">
+
+         <div class="new" *ngFor="let new of news" [new]="new">
+            <h2>Название проекта: {{new.title}}</h2>
+            <p>Дата создания: {{new.date}}</p>
+            <p>Описание проекта: {{new.text}}</p>
+
+         </div>
+
+      </div>
+   </div>
+</div>
